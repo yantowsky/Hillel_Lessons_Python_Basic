@@ -2,7 +2,7 @@
 # my_list = [1, 2, 3, 4, 5]
 # my_list = [1, 2, 3]
 # my_list = [1]
-my_list = [0]
+my_list = []
 
 value_mid_odd_list = len(my_list) - (len(my_list) // 2)
 
