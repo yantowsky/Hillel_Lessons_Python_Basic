@@ -2,10 +2,7 @@ import re
 
 
 def second_index(text: str, some_str: str):
-    list_index = []
-
-    for match in re.finditer(some_str, text):
-        list_index.append(match.start())
+    list_index = [index.start() for index in re.finditer(some_str, text)]
 
     return list_index[1] if len(list_index) > 1 else None
 
