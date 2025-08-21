@@ -1,4 +1,4 @@
-def add_one(some_list):
+def add_one(some_list: list) -> list:
     some_list_to_num_plus_one = int(''.join(str(num) for num in some_list)) + 1
     num_to_mod_list_int = [int(item) for item in list(str(some_list_to_num_plus_one))]
 
