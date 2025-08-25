@@ -1,4 +1,4 @@
-def popular_words(text, words):
+def popular_words(text: str, words: list[str]) -> dict[str, int]:
     list_text = text.lower().split()
 
     dict_word_count = {word: list_text.count(word) for word in words}
