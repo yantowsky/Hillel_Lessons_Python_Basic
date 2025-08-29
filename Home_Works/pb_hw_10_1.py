@@ -16,7 +16,7 @@ def some_gen(begin: int | float, end: int | float, func: Callable[[int | float],
     func (function): The function to apply to each element
 
     Returns:
-    Generator[int | float | Any, Any]: Generator function
+    Generator[int | float | None, None]: Generator function
     """
 
     for _ in range(end):
