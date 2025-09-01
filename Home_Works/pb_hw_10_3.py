@@ -9,8 +9,8 @@ def is_even(digit: int) -> bool:
     bool: True if the number is even, False otherwise.
     """
 
-    return True if digit % 2 == 0 else False
-
+    # return True if digit % 2 == 0 else False
+    return not digit % 2
 
 assert is_even(2) == True, 'Test1'
 assert is_even(5) == False, 'Test2'
