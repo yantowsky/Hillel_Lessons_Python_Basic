@@ -5,8 +5,6 @@ def counter(func):
         nonlocal count
         count += 1
 
-        print(f'Function {func.__name__} called {count} times: ', end='')
-
         func(*args, **kwargs)
 
         return count
@@ -15,19 +13,24 @@ def counter(func):
 
 
 @counter
-def example_function(your_name: str):
-    print(f'Inside the function -> Hi, {your_name}!')
+def example_function(*args, **kwargs):
+    print("Inside the function")
+    if args:
+        print(f'Your args: {args}')
+    if kwargs:
+        print(f'Your kwargs: {kwargs}')
+    print('=' * 50)
 
 
-example_function('Eugene')
-example_function('Tasia')
-example_function('Andy')
+assert example_function() == 1, 'Test1 failed'
 
-assert example_function('Test1') == 4, 'Test1 failed'
+example_function()
+example_function()
 
-example_function('Vika')
-example_function('Igor')
+assert example_function() == 4, 'Test2 failed'
 
-assert example_function('Test2') == 7, 'Test2 failed'
+example_function(10, key1="value1", key2="value2")
+
+assert example_function(key3="value3") == 6, 'Test3 failed'
 
 print('TEST OK')
