@@ -3,7 +3,7 @@ class Fraction:
 
         # If you enable this check:
         #
-        # if (a / b) > 1:
+        # if (a / b) >= 1:
         #     raise ValueError('This is not a proper fraction')
         #
         # the program will terminate with an error
